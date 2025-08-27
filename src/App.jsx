@@ -7,6 +7,7 @@ import TrustSection from './components/TrustSection'
 import Testimonials from './components/Testimonials'
 import ContactForm from './components/ContactForm'
 import Footer from './components/Footer'
+import WhatsAppButton from './components/WhatsAppButton'
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
         <ContactForm />
       </main>
       <Footer />
+      <WhatsAppButton />
     </div>
   )
 }

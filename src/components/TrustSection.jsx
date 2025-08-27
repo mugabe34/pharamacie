@@ -53,11 +53,11 @@ const TrustSection = () => {
   ]
 
   const pharmacistEndorsement = {
-    name: "Dr. Uwimana Jean-Claude, PharmD",
+    name: "Dr. Kabera Justin, PharmD",
     title: "Pharmacien en Chef & Fondateur",
-    credentials: "PharmD, RPh, 25+ ans d'expérience",
+    credentials: "PharmD, RPh, 10+ ans d'expérience",
     image: "/api/placeholder/120/120",
-    quote: "En tant que pharmacien praticien depuis plus de 25 ans, j'ai vu d'innombrables formulations de désinfectants. C'est pourquoi j'ai créé Pharmacie L'Experience - pour fournir aux familles la même protection de qualité hospitalière en laquelle j'ai confiance pour ma propre famille.",
+    quote: "En tant que pharmacien praticien depuis plus de 10 ans, j'ai développé une expertise approfondie dans la formulation de produits de santé. Pharmacie L'Experience représente mon engagement à fournir aux familles rwandaises des produits de la plus haute qualité, formulés avec soin et testés rigoureusement.",
     signature: "/api/placeholder/150/50"
   }
 

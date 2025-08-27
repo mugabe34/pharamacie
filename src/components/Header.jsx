@@ -38,16 +38,16 @@ const Header = () => {
           <div className="flex items-center space-x-4">
             <div className="flex items-center space-x-1">
               <Phone size={14} />
-              <span>0788544970</span>
+              <span>0788473857</span>
             </div>
             <div className="flex items-center space-x-1">
               <Mail size={14} />
-              <span>laboratoirel'expérience@gmail.com</span>
+              <span>pharmacie/'experience@yahoo.fr</span>
             </div>
           </div>
           <div className="hidden md:flex items-center space-x-1">
             <MapPin size={14} />
-            <span>Kigali, Kicukiro, Gahanga</span>
+            <span>4693 Kigali/Rwanda, Kicukiro Gahanga</span>
           </div>
         </div>
       </div>

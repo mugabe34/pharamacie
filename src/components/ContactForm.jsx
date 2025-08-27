@@ -30,16 +30,31 @@ const ContactForm = () => {
 
   const onSubmit = async (data) => {
     setIsSubmitting(true)
-    
+
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000))
-      
-      console.log('Form data:', data)
+      // Create email content
+      const emailSubject = encodeURIComponent(`Contact: ${data.subject}`)
+      const emailBody = encodeURIComponent(`
+Nom: ${data.name}
+Email: ${data.email}
+Téléphone: ${data.phone || 'Non fourni'}
+Type de produit: ${data.productType}
+Sujet: ${data.subject}
+
+Message:
+${data.message}
+
+---
+Envoyé depuis le site web de Pharmacie L'Experience
+      `)
+
+      // Open email client
+      window.open(`mailto:pharmacie/'experience@yahoo.fr?subject=${emailSubject}&body=${emailBody}`)
+
       showContactToast()
       reset()
     } catch (error) {
-      showErrorToast('Something went wrong. Please try again.')
+      showErrorToast('Quelque chose s\'est mal passé. Veuillez réessayer.')
     } finally {
       setIsSubmitting(false)
     }
@@ -49,20 +64,20 @@ const ContactForm = () => {
     {
       icon: Phone,
       title: "Appelez-nous",
-      details: "0788544970",
+      details: "0788473857",
       subtext: "Lun-Ven 8h-18h"
     },
     {
       icon: Mail,
       title: "Écrivez-nous",
-      details: "laboratoirel'expérience@gmail.com",
+      details: "pharmacie/'experience@yahoo.fr",
       subtext: "Réponse sous 2 heures"
     },
     {
       icon: MapPin,
       title: "Visitez-nous",
-      details: "Kigali, Kicukiro",
-      subtext: "Gahanga, Rwanda"
+      details: "4693 Kigali/Rwanda",
+      subtext: "Kicukiro Gahanga"
     },
     {
       icon: Clock,
@@ -127,11 +142,11 @@ const ContactForm = () => {
               viewport={{ once: true }}
               className="card p-6 bg-gradient-to-r from-primary-600 to-primary-700 text-white"
             >
-              <h4 className="text-xl font-bold mb-3">Offres Spéciales</h4>
+              <h4 className="text-xl font-bold mb-3">Informations Légales</h4>
               <ul className="space-y-2 text-primary-100">
+                <li>• Numéro TIN: 103751435</li>
                 <li>• Consultation gratuite avec pharmacien</li>
                 <li>• 15% de réduction pour professionnels de santé</li>
-                <li>• Prix préférentiels pour entreprises</li>
                 <li>• Programme de fidélité disponible</li>
               </ul>
             </motion.div>
